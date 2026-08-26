@@ -93,10 +93,11 @@ h1 em { font-style: normal; background: var(--brand); -webkit-background-clip: t
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
 .cta-note { font-size: 14px; color: var(--muted); }
 .phone {
-  width: min(400px, 100%); aspect-ratio: 1000 / 2168; overflow: hidden; margin: 0 auto; border-radius: 44px; overflow: hidden;
-  border: 1px solid var(--border); box-shadow: 0 40px 90px rgba(0,0,0,.6), 0 0 0 6px #050507;
-  background: #050507;
+  width: min(380px, 100%); aspect-ratio: 800 / 1734; margin: 0 auto;
+  border-radius: 44px; overflow: hidden; background: #050507;
+  border: 1px solid var(--border); box-shadow: 0 40px 90px rgba(0,0,0,.6), 0 0 0 7px #050507, 0 0 0 8px #2a2a36;
 }
+.phone img { width: 100%; height: 100%; object-fit: cover; }
 .hero .phone { animation: float 7s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0) rotate(-1.2deg); } 50% { transform: translateY(-12px) rotate(-1.2deg); } }
 
@@ -126,7 +127,7 @@ h2 {
 .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
 .mode {
   background: var(--surface); border: 1px solid var(--border); border-radius: 28px;
-  padding: 36px; display: grid; grid-template-rows: auto auto 1fr; gap: 22px;
+  padding: 36px; display: flex; flex-direction: column; gap: 22px;
 }
 .mode .tag {
   display: inline-flex; align-items: center; gap: 8px; width: max-content;
@@ -144,16 +145,14 @@ h2 {
 }
 .stages b { font-family: var(--display); font-size: 20px; letter-spacing: .06em; text-transform: uppercase; }
 .stages span { display: block; color: var(--text-2); font-size: 15px; }
-.mode .phone { width: auto; height: 100%; max-width: 100%; border-radius: 34px; margin-top: 8px; }
-.mode .phone img { height: 100%; width: auto; }
-.mode-shot { display: flex; justify-content: center; align-items: flex-start; overflow: hidden; height: 100%; min-height: 480px; align-self: stretch; border-radius: 24px 24px 0 0; margin: 0 -36px -36px; padding: 0 36px; }
-.mode-shot .phone { border-radius: 34px 34px 0 0; }
+.mode .phone { width: min(300px, 100%); border-radius: 36px; }
+.mode-shot { margin-top: auto; padding-top: 12px; display: flex; justify-content: center; }
 
 /* booth */
 .booth { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; overflow: hidden; }
-.card .shot { height: 470px; overflow: hidden; display: flex; justify-content: center; align-items: flex-start; padding: 28px 28px 0; background: linear-gradient(180deg, var(--surface-2), var(--surface)); }
-.card .phone { width: 280px; border-radius: 30px; box-shadow: 0 24px 50px rgba(0,0,0,.55); }
+.card .shot { display: flex; justify-content: center; padding: 28px 28px 8px; background: linear-gradient(180deg, var(--surface-2), var(--surface)); }
+.card .phone { width: 240px; border-radius: 30px; box-shadow: 0 24px 50px rgba(0,0,0,.55), 0 0 0 6px #050507, 0 0 0 7px #2a2a36; }
 .card .body { padding: 24px 26px 28px; }
 .card h3 { font-family: var(--display); font-weight: 900; text-transform: uppercase; font-size: 30px; margin: 0 0 8px; line-height: 1; }
 .card p { color: var(--text-2); margin: 0; font-size: 15px; }
